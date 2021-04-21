@@ -25,7 +25,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/donuts"
-        android:onClick="showDonutOrder"
         android:src="@drawable/donut_circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textintro" />
@@ -37,7 +36,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/ice_cream_sandwiches"
-        android:onClick="showIceCreamOrder"
         android:src="@drawable/icecream_circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donut" />
@@ -49,7 +47,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:contentDescription="@string/froyo"
-        android:onClick="showFroyoOrder"
         android:src="@drawable/froyo_circle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ice_cream" />
