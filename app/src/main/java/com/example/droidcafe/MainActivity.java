@@ -17,10 +17,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE =
-            "com.example.android.droidcafe.extra.MESSAGE";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =
-                        new Intent(MainActivity.this, OrderActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

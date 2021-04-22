@@ -12,13 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class FirstFragment extends Fragment {
 
     ImageView imgDonut;
     ImageView imgIceCream;
     ImageView imgFroyo;
 
-    private String mOrderMessage;
+    private String mOrderMessage = "Order: ";
 
     @Override
     public View onCreateView(
@@ -31,6 +33,17 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("extra_message", mOrderMessage);
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment, bundle);
+            }
+        });
 
         imgDonut = view.findViewById(R.id.donut);
         imgIceCream = view.findViewById(R.id.ice_cream);
